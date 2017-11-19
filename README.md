@@ -1,0 +1,1 @@
+# Nerdtality-Windows-Spotify-Ad-Killer
