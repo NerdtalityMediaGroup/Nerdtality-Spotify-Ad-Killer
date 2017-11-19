@@ -30,7 +30,7 @@ CD /D "%~dp0"
 
 :NerdtalityWindowsSpotifyAdKiller
 
-:: Sets varibles
+:: Sets variables
 
 set updateid=32428529
 set hostdir=%SystemRoot%\system32\drivers\etc\
