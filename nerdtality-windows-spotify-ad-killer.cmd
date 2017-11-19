@@ -32,7 +32,7 @@ CD /D "%~dp0"
 
 :: Sets variables
 
-set updateid=32428529
+set updateid=32428530
 set hostdir=%SystemRoot%\system32\drivers\etc\
 set spotifydir=%appdata%\Spotify\
 
@@ -59,7 +59,7 @@ echo #Date and time applied: %DATE% %TIME%>>"%hostdir%hosts"
 echo #Update ID: %updateid%>>"%hostdir%hosts"
 echo 0.0.0.0 adclick.g.doublecklick.net>>"%hostdir%hosts"
 echo 0.0.0.0 googleads.g.doubleclick.net>>"%hostdir%hosts"
-echo 0.0.0.0 http://www.googleadservices.com>>"%hostdir%hosts"
+echo 0.0.0.0 googleadservices.com>>"%hostdir%hosts"
 echo 0.0.0.0 pubads.g.doubleclick.net>>"%hostdir%hosts"
 echo 0.0.0.0 securepubads.g.doubleclick.net>>"%hostdir%hosts"
 echo 0.0.0.0 pagead2.googlesyndication.com>>"%hostdir%hosts"
