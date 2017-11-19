@@ -1,4 +1,4 @@
-**Welcome to Nerdtality Spotify Ad Killer**
+**Nerdtality Spotify Ad Killer**
 ===================
 
 
