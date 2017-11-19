@@ -32,7 +32,7 @@ CD /D "%~dp0"
 
 :: Sets varibles
 
-set updateid=32428528
+set updateid=32428529
 set hostdir=%SystemRoot%\system32\drivers\etc\
 set spotifydir=%appdata%\Spotify\
 
@@ -42,27 +42,37 @@ tasklist | find /i "spotify.exe" && taskkill /im spotify.exe /F > nul
 
 :: Looks and updates for hosts file
 
-IF NOT EXIST %hostdir%hosts.%updateid% copy %hostdir%hosts %hostdir%hosts.%updateid% > nul
+IF NOT EXIST %hostdir%hosts.%updateid% goto ModifyHosts
+
+goto SkipHosts
+
+
+:ModifyHosts
 
 :: Writes to hosts file if not found or update is needed
 
-echo. >>"%hostdir%hosts" > nul
-echo. >>"%hostdir%hosts" > nul
-echo #Nerdtality Spotify Ad Killer>>"%hostdir%hosts" > nul
-echo 0.0.0.0 adclick.g.doublecklick.net>>"%hostdir%hosts" > nul
-echo 0.0.0.0 googleads.g.doubleclick.net>>"%hostdir%hosts" > nul
-echo 0.0.0.0 http://www.googleadservices.com>>"%hostdir%hosts" > nul
-echo 0.0.0.0 pubads.g.doubleclick.net>>"%hostdir%hosts" > nul
-echo 0.0.0.0 securepubads.g.doubleclick.net>>"%hostdir%hosts" > nul
-echo 0.0.0.0 pagead2.googlesyndication.com>>"%hostdir%hosts" > nul
-echo 0.0.0.0 spclient.wg.spotify.com>>"%hostdir%hosts" > nul
-echo 0.0.0.0 audio2.spotify.com>>"%hostdir%hosts" > nul
-echo # >>"%hostdir%hosts" > nul
+copy %hostdir%hosts %hostdir%hosts.%updateid% > nul
+echo. >>"%hostdir%hosts"
+echo. >>"%hostdir%hosts"
+echo #Nerdtality Spotify Ad Killer>>"%hostdir%hosts"
+echo #Date and time applied: %DATE% %TIME%>>"%hostdir%hosts"
+echo #Update ID: %updateid%>>"%hostdir%hosts"
+echo 0.0.0.0 adclick.g.doublecklick.net>>"%hostdir%hosts"
+echo 0.0.0.0 googleads.g.doubleclick.net>>"%hostdir%hosts"
+echo 0.0.0.0 http://www.googleadservices.com>>"%hostdir%hosts"
+echo 0.0.0.0 pubads.g.doubleclick.net>>"%hostdir%hosts"
+echo 0.0.0.0 securepubads.g.doubleclick.net>>"%hostdir%hosts"
+echo 0.0.0.0 pagead2.googlesyndication.com>>"%hostdir%hosts"
+echo 0.0.0.0 spclient.wg.spotify.com>>"%hostdir%hosts"
+echo 0.0.0.0 audio2.spotify.com>>"%hostdir%hosts"
+echo # >>"%hostdir%hosts"
+
+:SkipHosts
 
 :: Deletes Spotify ad file and creates an empty file
 
 IF EXIST %spotifydir%Apps\ad.spa del /f /q %spotifydir%Apps\ad.spa > nul
-echo. >%spotifydir%Apps\ad.spa > nul
+echo. >%spotifydir%Apps\ad.spa
 
 :: Flushing your DNS after rewriting your hosts file
 
@@ -76,6 +86,8 @@ IF EXIST %spotifydir%Spotify.exe start %spotifydir%Spotify.exe > nul
 :: ==============================================================================================
 :: End of script! For further questions or assistance, please visit https://nerdtality.com/forums
 :: ==============================================================================================
+
+start https://nerdtality.com/downloads/thanks
 
 :End
 exit
