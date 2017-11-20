@@ -11,7 +11,7 @@ Hey! Glad to see you here, tired of seeing Spotify ads? Look no further, **Nerdt
 To disable ads using  **Nerdtality Spotify Ad Killer**, start by selecting the appropriate version for your computer.
 
 **Windows**
-Right click [here](https://github.com/Nerdtality/Nerdtality-Spotify-Ad-Killer/raw/master/nerdtality-windows-spotify-ad-killer.cmd "GitHub RAW Nerdtality Windows Spotify Ad Killer") and click "Save link as:"
+Right click [here](https://github.com/Nerdtality/Nerdtality-Spotify-Ad-Killer/raw/master/nerdtality-windows-spotify-ad-killer.cmd "GitHub RAW Nerdtality Windows Spotify Ad Killer") and click "Save link as.."
 
 **Linux**
 Coming soon...
