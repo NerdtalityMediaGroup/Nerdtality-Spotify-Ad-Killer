@@ -83,9 +83,7 @@ ipconfig /flushdns > nul
 IF NOT EXIST %spotifydir%Spotify.exe echo Warning: The Spotify.exe file was not found in the default path, run Spotify manually.
 IF EXIST %spotifydir%Spotify.exe start %spotifydir%Spotify.exe > nul
 
-:: ==============================================================================================
 :: End of script! For further questions or assistance, please visit https://nerdtality.com/forums
-:: ==============================================================================================
 
 start https://nerdtality.com/downloads/thanks
 
